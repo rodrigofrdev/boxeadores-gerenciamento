@@ -1,5 +1,6 @@
 // Carrega as variáveis de ambiente. Sobe o nível para acessar o arquivo .env na raiz do projeto.
-require("dotenv").config({ path: '../.env' });
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
